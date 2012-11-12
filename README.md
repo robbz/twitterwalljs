@@ -38,6 +38,7 @@ apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q='
 * Please note that the twitter API limits the max results on the first load too 100.
 * For editing the style please use the given css file.
 * This plugin is completely based on the client, that means you won't need any server logic.
+* For more information see this <a href="http://devangelist.de/twitterwall-mit-javascript-twitterwalljs/">blog-post</a> (german).
 
 #Demo:
 
