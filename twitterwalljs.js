@@ -65,7 +65,9 @@
             }
 
             if (config.showUser) {
-                result += '<span class="tweetUser"><a href="http://www.twitter.com/' + data.from_user + '/status/' + data.id_str + '">' + data.from_user + '</a></span>';
+                result += '<span class="tweetUser">' + 
+                    '<a' + (config.openLinksInNewTab ? ' target="_blank"' : '') + 
+                    ' href="http://www.twitter.com/' + data.from_user + '/status/' + data.id_str + '">' + data.from_user + '</a></span>';
             }
             
             if (config.showDate) {
