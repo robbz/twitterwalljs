@@ -1,6 +1,8 @@
 # twitterwalljs
 
-This jQuery plugin shows all recent twitter feeds to a specified hashtag.
+Based on a jQuery plugin this simple script allows to build your very own twitterwall with pure javascript! A twitter wall is nothing else then a collection of tweets to a specific "hashtag". Automatically from time to time the plugin refresehes the screen and adds the new tweets found to the tag.
+
+It is nearly complete css-based and can be styled easily in any way you like.
 
 #### Create a twitter wall for the tag "javascript"
 
@@ -33,5 +35,6 @@ apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q='
 
 * Please note that the twitter API limits the max results on the first load too 100.
 * For editing the style please use the given css file.
+* This plugin is completely based on the client, that means you won't need any server logic.
 
-A demo can be found on <a href="http://www.twitterwall.it/de/events/tmc/twitterwall.aspx">twitterwall.it</a>
+A demo can be found on <a href="http://www.twitterwall.it/de/events/tmc/twitterwall.aspx">twitterwall.it</a>.
