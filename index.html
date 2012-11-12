@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="twitterwalljs.css" />
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="twitterwalljs.js"></script>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#twitterWall").twitterWall("muenchen", { refresh: false, refreshTimeout: 5000 });
+        });
+
+    </script>
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+    <div id="twitterWall" class="tweetContainer">
+        <div class="loader">
+            <div></div>
+            <span>Loading Tweets</span>
+        </div>
+    </div>
+
+</body>
+</html>
