@@ -39,4 +39,6 @@ apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q='
 * For editing the style please use the given css file.
 * This plugin is completely based on the client, that means you won't need any server logic.
 
+#Demo:
+
 A demo can be found on <a href="http://www.twitterwall.it/de/events/tmc/twitterwall.aspx">twitterwall.it</a>.
