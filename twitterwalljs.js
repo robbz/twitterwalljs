@@ -10,6 +10,7 @@
             refreshTimeout: 15000,            
             maxTweetsInWall: 200,
             firstLoadResults: 100,
+            openLinksInNewTab: true,
             apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q=' + search
         };
 
@@ -49,8 +50,8 @@
         var renderTweet = function(data) {
             var result;
             var text = data.text;
-            text = data.text.replace(/(http:\/\/\S+)/g, '<a href="$1">$1</a>');
-            text = text.replace(/\@(\w+)/g, '<a href="http://twitter.com/$1">@$1</a>');
+            text = data.text.replace(/(http:\/\/\S+)/g, '<a' + (config.openLinksInNewTab ? ' target="_blank"' : '') + ' href="$1">$1</a>');
+            text = text.replace(/\@(\w+)/g, '<a' + (config.openLinksInNewTab ? ' target="_blank"' : '') + ' href="http://twitter.com/$1">@$1</a>');
 
             result = '<div class="tweet" data-id="' + data.id + '">';
             result += '<div class="tweetText">' + text + '</div>';
