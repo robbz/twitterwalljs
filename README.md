@@ -24,10 +24,6 @@ $(document).ready(function () {
 #Options:
 
 ```
-showDate: true,
-showUserImage: true,
-showUser: true,
-showTriangle: true,
 refresh: true,
 refreshTimeout: 15000,            
 maxTweetsInWall: 200,
