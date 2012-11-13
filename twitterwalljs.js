@@ -1,20 +1,26 @@
 (function ($) {
-    $.fn.twitterWall = function (search, options) {
+    $.fn.twitterWall = function (search, options, tweetTemplate) {
         
         var defaults = {
-            showDate: true,
-            showUserImage: true,
-            showUser: true,
-            showTriangle: true,
             refresh: true,
             refreshTimeout: 15000,
             maxTweetsInWall: 200,
             firstLoadResults: 100,
-            openLinksInNewTab: true,
             apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q=' + search
         };
         var config = $.extend(defaults, options),
             container = $(this);
+
+        tweetTemplate = tweetTemplate ||
+            '<div class="tweet">' +
+                '<div class="tweetText"><%= text %></div>' +
+                '<div class="tweetTriangle"></div>' +
+                '<img class="tweetImg" src="<%= profileImageUrl %>" />' +
+                '<span class="tweetUser">' +
+                    '<a target="_blank" href="<%= statusUrl %>"><%= userName %></a>' +
+                '</span>' +
+                '<span class="tweetTime">(<%= dateFromNow %>)</span>' +
+            '</div>';
 
         var init = function () {
             load(getNextApiUrl(0), function (data) {
@@ -59,8 +65,7 @@
             return config.apiUrl + "&rpp=" + config.firstLoadResults + (lastId > 0 ? "&since_id=" + lastId : "");
         };
 
-        var renderTweet = function(data) {            
-
+        var renderTweet = function(data) {
             var tweet = {
                 text: replaceLinksInText(data.text),
                 profileImageUrl: data.profile_image_url,
@@ -68,28 +73,7 @@
                 dateFromNow: moment(data.created_at).fromNow(),
                 userName: data.from_user
             };
-
-            var result = '<div class="tweet">';
-                result += '<div class="tweetText">' + tweet.text + '</div>';
-
-            if (config.showTriangle) {
-                result += '<div class="tweetTriangle"></div>';
-            }            
-            if (config.showUserImage) {
-                result += '<img class="tweetImg" src="' + tweet.profileImageUrl + '" />';
-            }
-            if (config.showUser) {
-                result += '<span class="tweetUser">' +
-                              '<a' + (config.openLinksInNewTab ? ' target="_blank"' : '') + ' href="' + tweet.statusUrl + '">' + tweet.userName + '</a>' +
-                          '</span>';
-            }            
-            if (config.showDate) {
-                result += '<span class="tweetTime">(' + tweet.dateFromNow + ')</span>'
-            }
-
-            result += '</div>';
-
-            return result;
+            return _.template(tweetTemplate, tweet);
         };
 
         var replaceLinksInText = function (text) {
