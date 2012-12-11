@@ -38,4 +38,4 @@ apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q='
 
 #Demo:
 
-A demo can be found on <a href="http://www.twitterwall.it/de/events/tmc/twitterwall.aspx">twitterwall.it</a>.
+A demo can be found on <a href="http://www.twitterwall.it/de/twitter/suedtirol.aspx">twitterwall.it</a>.
