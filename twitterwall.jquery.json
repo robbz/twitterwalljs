@@ -1,0 +1,39 @@
+{
+  "name": "twitterwall",
+  "title": "jQuery Twitterwall",
+  "description": "A twitterwall for jQuery.",
+  "keywords": [
+    "jquery",
+    "twitter",
+	"twitterwall",
+	"api",
+    "plugins"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Roberto Bez",
+    "url": "http://devangelist.de"
+  },
+  "maintainers": [
+    {
+      "name": "Roberto Bez",
+      "email": "rob@devangelist.de",
+      "url": "http://devangelist.de"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "bugs": "https://github.com/robbz/twitterwalljs/issues",
+  "homepage": "https://github.com/robbz/twitterwalljs",
+  "docs": "https://github.com/robbz/twitterwalljs#readme",
+  "download": "https://github.com/robbz/twitterwalljs/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.4",
+	"moment": ">=1.7.2",
+	"underscore": ">=1.4.2"
+  }
+}
