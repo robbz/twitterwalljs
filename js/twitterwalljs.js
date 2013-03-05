@@ -6,6 +6,8 @@
             refreshTimeout: 15000,
             maxTweetsInWall: 200,
             firstLoadResults: 100,
+            language: 'en',
+            detectLanguage: true,
             apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q=' + search
         };
         var config = $.extend(defaults, options),
@@ -22,13 +24,21 @@
                 '<span class="tweetTime">(<%= dateFromNow %>)</span>' +
             '</div>';
 
+        if (config.detectLanguage) {
+            var language = navigator.userLanguage || navigator.language;
+            if (language.length > 2) {
+                language = language.substr(0, 2);
+            }
+            config.language = language;            
+        }
+
         var init = function () {
             load(getNextApiUrl(0), function (data) {
                 for (var i = 0; i < data.results.length; i++) {
                     var tweet = $(renderTweet(data.results[i]));
-                        container.find(".loader").fadeOut();
-                        container.append(tweet);
-                        tweet.fadeIn();
+                    container.find(".loader").fadeOut();
+                    container.append(tweet);
+                    tweet.fadeIn();
                 }
             });
         };
@@ -70,7 +80,7 @@
                 text: replaceLinksInText(data.text),
                 profileImageUrl: data.profile_image_url,
                 statusUrl: createStatusUrl(data.from_user, data.id_str),
-                dateFromNow: moment(data.created_at).fromNow(),
+                dateFromNow: moment(data.created_at).lang(config.language).fromNow(),
                 userName: data.from_user
             };
             return _.template(tweetTemplate, tweet);
