@@ -1,7 +1,7 @@
 ﻿{
     "name": "twitterwall",
     "title": "jQuery Twitterwall",
-    "version": "1.0.6",
+    "version": "1.1.0",
     "description": "A customizable twitterwall for jQuery.",
     "keywords": [ "jquery", "ui", "twitter", "twitterwall", "api" ],
     "author": {

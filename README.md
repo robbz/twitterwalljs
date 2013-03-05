@@ -8,12 +8,14 @@ It is nearly complete css-based and can be styled easily in any way you like.
 
 #### Create a twitter wall for the tag "javascript"
 
-Include the javascript and css file in your website and call the plugin:
+Include the javascript and css files in your website (if you haven't already included underscore and momentjs in your website, now you should):
 
 ``` html
-<link rel="stylesheet" href="twitterwalljs.css" />
-<script type="text/javascript" src="twitterwalljs.js"></script>
+<link rel="stylesheet" href="css/twitterwalljs.css" />
+<script type="text/javascript" src="js/twitterwalljs.js"></script>
 ```
+
+Call the plugin with the options parameter:
 
 ```javascript
 $(document).ready(function () {
@@ -28,6 +30,8 @@ refresh: true,
 refreshTimeout: 15000,            
 maxTweetsInWall: 200,
 firstLoadResults: 100,
+language: 'en',
+detectLanguage: true,
 apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q=' + search
 ```
 
@@ -35,6 +39,16 @@ apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q='
 * For editing the style please use the given css file.
 * This plugin is completely based on the client, that means you won't need any server logic.
 * For more information see this <a href="http://devangelist.de/twitterwall-mit-javascript-twitterwalljs/">blog-post</a> (german).
+
+#Language support:
+
+#### Include language files:
+
+As this plugin uses momentjs for date-formatting, you can <a href="https://github.com/timrwood/moment/tree/develop/min">download</a> your preferred language files. To use more than one language, simply reference all the files desired, create a lang-de-en-it.js, or use the langs.min file, which includes all available languages (Warning: bigger size!).
+
+#### Language detection:
+
+If the detectLanguage-option is enabled (per default it is), it will look for the browser-language (webkit) or system-language (IE).
 
 #Demo:
 
