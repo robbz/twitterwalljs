@@ -1,0 +1,97 @@
+.tweetContainer {
+    background-color: #4ab2c6 !Important;
+    height: 600px;
+    width: 994px;
+    overflow: auto;
+    position: relative;
+}
+
+.tweet {
+    width: 200px;
+    height: 180px;
+    margin: 5px;
+    float:left;
+    position: relative;
+    display: none;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.tweet .tweetImg {
+    position: absolute;
+    bottom: 0px;
+    width: 48px;
+    height: 48px;
+}
+
+.tweet .tweetUser {
+    position: absolute;
+    bottom: 10px;
+    left: 52px;
+}
+
+.tweet .tweetUser a {
+    color: white;
+}
+
+.tweet .tweetText {
+    position: absolute;
+    padding: 10px;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    width: 180px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.tweet .tweetTime {
+    position: absolute;
+    bottom: 25px;
+    left: 52px;
+}
+
+.tweet .tweetText a {
+    color: orange;
+}
+
+.tweet .tweetTriangle {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    height: 10px;
+    width: 30px;
+    background-image: url("../img/triangle.png");
+}
+
+.tweetContainer .loader {
+    
+}
+
+.tweetContainer .loader div {    
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: white;
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    filter:alpha(opacity=60);
+    color: white;    
+    z-index: 100;
+}
+
+.tweetContainer .loader span {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 101;
+}
