@@ -23,7 +23,7 @@ $(document).ready(function () {
 });
 ```
 
-#Options:
+#Options
 
 ```
 refresh: true,
@@ -40,16 +40,16 @@ apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q='
 * This plugin is completely based on the client, that means you won't need any server logic.
 * For more information see this <a href="http://devangelist.de/twitterwall-mit-javascript-twitterwalljs/">blog-post</a> (german).
 
-#Language support:
+#Language support
 
-#### Include language files:
+#### Include language files
 
 As this plugin uses momentjs for date-formatting, you can <a href="https://github.com/timrwood/moment/tree/develop/min">download</a> your preferred language files. To use more than one language, simply reference all the files desired, create a lang-de-en-it.js, or use the langs.min file, which includes all available languages (Warning: bigger size!).
 
-#### Language detection:
+#### Automatic language detection
 
 If the detectLanguage-option is enabled (per default it is), it will look for the browser-language (webkit) or system-language (IE).
 
-#Demo:
+#Demo
 
 A demo can be found on <a href="http://www.twitterwall.it/de/twitter/suedtirol.aspx">twitterwall.it</a>.
