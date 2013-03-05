@@ -4,7 +4,7 @@ Based on a jQuery plugin this simple script allows to build your very own twitte
 
 It is nearly complete css-based and can be styled easily in any way you like.
 
-![Twitterwall screenshot](https://raw.github.com/robbz/twitterwalljs/master/screenshot.png)
+![Twitterwall screenshot](https://raw.github.com/robbz/twitterwalljs/master/demo/screenshot.png)
 
 #### Create a twitter wall for the tag "javascript"
 
