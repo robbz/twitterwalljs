@@ -1,6 +1,6 @@
 # twitterwalljs
 
-Based on a jQuery plugin this simple script allows to build your very own twitterwall with pure javascript! A twitter wall is nothing else then a collection of tweets to a specific "hashtag". Automatically from time to time the plugin refresehes the screen and adds the new tweets found to the tag.
+Based on a jQuery plugin, this simple script allows to build your very own twitterwall with pure javascript! A twitter wall is nothing else then a collection of tweets to a specific "hashtag". Automatically from time to time the plugin refresehes the screen and adds the new tweets found to the tag.
 
 It is nearly complete css-based and can be styled easily in any way you like.
 
@@ -23,7 +23,7 @@ $(document).ready(function () {
 });
 ```
 
-#Options
+##Options
 
 ```
 refresh: true,
@@ -36,11 +36,11 @@ apiUrl: 'http://search.twitter.com/search.json?callback=?&result_type=recent&q='
 ```
 
 * Please note that the twitter API limits the max results on the first load too 100.
-* For editing the style please use the given css file.
-* This plugin is completely based on the client, that means you won't need any server logic.
+* For editing the style please use the given **css file**.
+* This plugin is completely **based on the client**, that means you won't need any server logic.
 * For more information see this <a href="http://devangelist.de/twitterwall-mit-javascript-twitterwalljs/">blog-post</a> (german).
 
-#Language support
+##Language support
 
 #### Include language files
 
@@ -50,6 +50,6 @@ As this plugin uses momentjs for date-formatting, you can <a href="https://githu
 
 If the detectLanguage-option is enabled (per default it is), it will look for the browser-language (webkit) or system-language (IE).
 
-#Demo
+##Demo
 
 A demo can be found on <a href="http://www.twitterwall.it/de/twitter/suedtirol.aspx">twitterwall.it</a>.
